@@ -25,7 +25,7 @@ const steps = [
   {
     icon: Users,
     title: 'Respuesta en Tiempo Real',
-    description: 'Tu equipo ve el mensaje al instante con WebSocket. Puede responder, agregar notas internas, o escalar a otro departamento si es necesario.',
+    description: 'Tu equipo ve el mensaje al instante y puede responder de inmediato. También puede agregar notas internas o escalar el caso si es necesario.',
     color: 'text-delft_blue-600',
     bgColor: 'bg-delft_blue-50'
   },
