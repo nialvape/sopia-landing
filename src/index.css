@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-gray-900;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-russian_violet-950 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  
+  .btn-primary {
+    @apply btn bg-russian_violet-950 text-white hover:bg-russian_violet-800 px-6 py-3;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-delft_blue-950 text-white hover:bg-delft_blue-800 px-6 py-3;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-russian_violet-950 bg-transparent text-russian_violet-950 hover:bg-russian_violet-50 px-6 py-3;
+  }
+}
+
