@@ -33,6 +33,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                     service_id: import.meta.env.VITE_EMAILJS_SERVICE_ID,
                     template_id: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                     user_id: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+                    accessToken: import.meta.env.VITE_EMAILJS_PRIVATE_KEY,
                     template_params: {
                         from_name: formData.name,
                         from_email: formData.email,
@@ -164,7 +165,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                     {/* Mensaje */}
                     <div>
                         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                            ¿Qué te gustaría saber?
+                            ¿Algo que te gustaría agregar?
                         </label>
                         <div className="relative">
                             <MessageSquare className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
@@ -173,7 +174,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                                 value={formData.message}
                                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                 rows={4}
-                                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-russian_violet-500 focus:border-transparent outline-none transition-all resize-none"
+                                className="w-full pl-4 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-russian_violet-500 focus:border-transparent outline-none transition-all resize-none"
                                 placeholder="Contanos sobre tu caso de uso..."
                             />
                         </div>
