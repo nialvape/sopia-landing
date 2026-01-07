@@ -67,9 +67,9 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-            <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] flex flex-col overflow-hidden">
                 {/* Header */}
-                <div className="sticky top-0 bg-gradient-to-r from-russian_violet-950 to-delft_blue-950 text-white p-6 rounded-t-2xl">
+                <div className="bg-gradient-to-r from-russian_violet-950 to-delft_blue-950 text-white p-6 rounded-t-2xl flex-shrink-0">
                     <div className="flex items-center justify-between">
                         <h2 className="text-2xl font-bold">Solicitar Demo</h2>
                         <button
@@ -86,7 +86,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                 </div>
 
                 {/* Form */}
-                <form onSubmit={handleSubmit} className="p-6 space-y-4">
+                <form onSubmit={handleSubmit} className="p-6 space-y-4 overflow-y-auto flex-1">
                     {/* Nombre */}
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -100,7 +100,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                                 required
                                 value={formData.name}
                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-russian_violet-500 focus:border-transparent outline-none transition-all"
+                                className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-russian_violet-500 focus:border-transparent outline-none transition-all text-gray-900"
                                 placeholder="Juan Pérez"
                             />
                         </div>
@@ -119,7 +119,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                                 required
                                 value={formData.email}
                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-russian_violet-500 focus:border-transparent outline-none transition-all"
+                                className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-russian_violet-500 focus:border-transparent outline-none transition-all text-gray-900"
                                 placeholder="juan@empresa.com"
                             />
                         </div>
@@ -138,7 +138,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                                 required
                                 value={formData.company}
                                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-russian_violet-500 focus:border-transparent outline-none transition-all"
+                                className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-russian_violet-500 focus:border-transparent outline-none transition-all text-gray-900"
                                 placeholder="Mi Empresa S.A."
                             />
                         </div>
@@ -156,7 +156,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                                 id="phone"
                                 value={formData.phone}
                                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-russian_violet-500 focus:border-transparent outline-none transition-all"
+                                className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-russian_violet-500 focus:border-transparent outline-none transition-all text-gray-900"
                                 placeholder="+54 9 11 1234-5678"
                             />
                         </div>
@@ -174,7 +174,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                                 value={formData.message}
                                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                 rows={4}
-                                className="w-full pl-4 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-russian_violet-500 focus:border-transparent outline-none transition-all resize-none"
+                                className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-russian_violet-500 focus:border-transparent outline-none transition-all resize-none text-gray-900"
                                 placeholder="Contanos sobre tu caso de uso..."
                             />
                         </div>
